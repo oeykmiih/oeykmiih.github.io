@@ -63,7 +63,7 @@ header .info {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* PAGE WIDTH = 84; ROWS = 84 / xCOLUMNS */
-  grid-auto-rows: 35vw;
+  grid-auto-rows: 20vw;
   grid-gap: max(3vmin, 16px);
   grid-auto-flow: dense;
 }
@@ -121,10 +121,6 @@ header .info {
 
   .w-2, .w-3, .w-4 {
     grid-column: span 1;
-  }
-
-  .h-2, .h-3, .h-4 {
-    grid-row: span 1;
   }
 
   .gallery-item .image img {
