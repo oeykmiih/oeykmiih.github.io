@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  transition: .3s ease-in-out;
 }
 
 * {
@@ -33,14 +34,13 @@ body {
   margin: 0;
   background-color: #f0f0f0;
   max-width: 100vw;
-  transition: .3s ease-in-out;
 }
 
-header {
+header, footer {
   margin: auto;
   min-height: 24px;
   max-width: 100vw;
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 900;
   padding: max(3vh, 12px) max(5vw, 16px);
 }
@@ -54,15 +54,6 @@ header .row {
 header .row div {
   filter: blur(2.5px);
   transition: .2s ease-in-out;
-}
-
-footer {
-  margin: auto;
-  min-height: 24px;
-  max-width: 100vw;
-  font-size: 36px;
-  font-weight: 900;
-  padding: max(3vh, 12px) max(5vw, 16px);
 }
 
 footer .row {
