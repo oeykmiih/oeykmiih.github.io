@@ -51,10 +51,10 @@ header .row {
 
 }
 
-header .row .index-button {
+/* header .row .index-button {
   filter: blur(2.5px);
   transition: .2s ease-in-out;
-}
+} */
 
 footer .row {
   justify-content: space-between;
