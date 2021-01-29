@@ -55,7 +55,7 @@ header, footer {
 }
 
 .spacer {
-  height: 4vh;
+  height: 5vh;
 }
 
 .row {
@@ -63,6 +63,7 @@ header, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position:relative;
 }
 
 /* text setup */
@@ -74,6 +75,17 @@ h2 {
   font-family: arial;
   font-size: 2rem;
   font-weight: lighter;
+}
+
+h3 {
+  font-family: arial;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+p {
+  padding: 0.2rem 0;
+  padding-left: 0.2rem;
 }
 
 /* --- */
@@ -123,35 +135,35 @@ h2 {
 
 /* grid setup */
 
-.gallery-canvas .w-2 {
+.w-2 {
   grid-column: span 2;
 }
 
-.gallery-canvas .w-3 {
+.w-3 {
   grid-column: span 3;
 }
 
-.gallery-canvas .w-4 {
+.w-4 {
   grid-column: span 4;
 }
 
-.gallery-canvas .w-5 {
+.w-5 {
   grid-column: span 5;
 }
 
-.gallery-canvas .h-2 {
+.h-2 {
   grid-row: span 2;
 
   height: calc(var(--grid-card-height) * 2 + var(--grid-row-gap));
 }
 
-.gallery-canvas .h-3 {
+.h-3 {
   grid-row: span 3;
 
   height: calc(var(--grid-card-height) * 3 + var(--grid-row-gap));
 }
 
-.gallery-canvas .h-4 {
+.h-4 {
   grid-row: span 4;
 
   height: calc(var(--grid-card-height) * 4 + var(--grid-row-gap));
@@ -187,7 +199,7 @@ h2 {
 @media only screen and (max-width: 770px) {
 
   .home-button {
-    visibility: hidden;
+    display: none;
   }
 
   .gallery-canvas {
