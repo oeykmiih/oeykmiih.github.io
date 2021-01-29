@@ -1,0 +1,15 @@
+#info .grid-card {
+  height: 78.5vh;
+}
+
+#info .default-grid {
+  min-height: 83.5vh;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* grid-rows: 83.5vh; */
+  grid-gap: 10vh 2.5vw;
+  grid-auto-flow: dense;
+
+}
