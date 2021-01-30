@@ -3,7 +3,8 @@
 }
 
 :root {
-  --grid-card-height: max(40vh, 160px);
+  --gallery-card-height: 20vw;
+  --grid-card-height: 20vh;
   --grid-row-gap: 7.5vh;
   --grid-column-gap: 1vw;
 }
@@ -44,14 +45,15 @@ body {
 
 header, footer {
   width: 100%;
-  height: 12.5vh;
+  height: max(12.5vh, 100px);
   display: flex;
 
   font-size: max(2rem, 12px);
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 2rem 3.5rem 0 3.5rem;
+  width: max(100vw,375px);
 }
 
 .spacer {
@@ -60,10 +62,8 @@ header, footer {
 
 .row {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position:relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* text setup */
@@ -88,10 +88,33 @@ p {
   padding-left: 0.2rem;
 }
 
+small {
+  padding-left: 0.5em;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.dwg {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+/* --- */
+
+  .page-name, .footer-text, .info-button {
+      text-align: right;
+  }
+
 /* --- */
 
 .gallery-canvas {
-  min-height: 82.5vh;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -103,34 +126,38 @@ p {
 }
 
 .default-grid {
-  min-height: 83.5vh;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
+  grid-auto-rows: auto;
   grid-row-gap: var(--grid-row-gap);
-  grid-column-gap: 2.5vw;
+  grid-column-gap: var(--grid-column-gap);
   grid-auto-flow: dense;
 
+}
+
+.gallery-canvas .grid-card {
+  height: var(--gallery-card-height);
 }
 
 .grid-card {
   overflow: hidden;
 
   height: var(--grid-card-height);
-  width: auto;
+
+  position: relative;
+
+  border: 1px solid red;
   /* card height essentially controlling row heigh */
 }
 
 .grid-card .grid-card-image {
-  transform-origin: center;
-  position: relative;
 }
 
 .grid-card .grid-card-image img {
   width: 100%;
   height: auto;
-  transform-origin: center;
 }
 
 /* grid setup */
@@ -154,62 +181,67 @@ p {
 .h-2 {
   grid-row: span 2;
 
-  height: calc(var(--grid-card-height) * 2 + var(--grid-row-gap));
+  height: calc(var(--grid-card-height) * 2 + var(--grid-row-gap) * 2);
 }
 
 .h-3 {
   grid-row: span 3;
 
-  height: calc(var(--grid-card-height) * 3 + var(--grid-row-gap));
+  height: calc(var(--grid-card-height) * 3 + var(--grid-row-gap) * 3);
 }
 
 .h-4 {
   grid-row: span 4;
 
-  height: calc(var(--grid-card-height) * 4 + var(--grid-row-gap));
+  height: calc(var(--grid-card-height) * 4 + var(--grid-row-gap) * 4);
 }
 
 /* responssive setup */
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .gallery-canvas {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
+
+  }
+
+  .gallery-canvas .grid-card {
+    height: 33vw;
   }
 
   .default-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .w-4, .w-5{
     grid-column: span 3;
   }
 
-  .w-2 {
-    grid-column: span 2;
+  .w-3, .w-2 {
+    grid-column: span 1;
   }
 
-    .h-3 {
+  .h-3 {
     grid-row: span 2;
+  }
+
+  .sw-2 {
+    grid-column: span 2;
   }
 
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 850px) {
 
   .home-button {
     display: none;
   }
 
-  .gallery-canvas {
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: auto;
+  .row {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .default-grid {
+  .default-grid, .gallery-canvas{
     grid-template-columns: repeat(1, 1fr);
-    grid-rows: auto;
   }
 
   .w-2, .w-3, .w-4, .w-5{
@@ -220,13 +252,11 @@ p {
     grid-row: span 1;
   }
 
-  .grid-card {
-    height: 80vh;
-    /* making sure grid cards are always shown in full */
+  .gallery-canvas .grid-card {
+    height: max(65vh, 120vw);
   }
 
-  .grid-card .image img {
+  .footer-text {
+    text-align: center;
   }
-
-
 }

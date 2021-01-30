@@ -15,36 +15,36 @@
 
 <body>
   <div class="container" id="home">
-    <!-- Start Header -->
-    <header>
-      <div class="row">
-        <div class="index-button">
-          <a href="index">■</a>
+    <section>
+      <!-- Start Header -->
+      <header>
+        <div class="row">
+          <div class="index-button">
+            <a href="index">■</a>
+          </div>
+          <div class="site-map-button">
+            <a href="info#site-map">site map</a>
+          </div>
+          <div class="mail-button">
+            <a href="mailto:kyeo@oeyk.xyz?subject=subject">kyeo@oeyk.xyz</a>
+          </div>
         </div>
-        <div class="site-map-button">
-          <a href="info#site-map">site map</a>
+      </header>
+      <!-- End Header -->
+
+      <div class="default-grid" id="info">
+
+        <div class="grid-card" style="">
+          <div class="grid-card-image" style="">
+            <img src="static/images/info/profile.png" alt="">
+          </div>
         </div>
-        <div class="mail-button">
-          <a href="mailto:kyeo@oeyk.xyz?subject=subject">kyeo@oeyk.xyz</a>
+        <div class="grid-card w-3" style="">
+          <h2> i'm joao baptista, an architecture student from portugal. </h2>
+          <h2> this website is a collection of what I have acomplished so far. </h2>
         </div>
-      </div>
-    </header>
-    <!-- End Header -->
 
-    <section class="default-grid" id="info">
-
-      <div class="grid-card" style="">
-        <div class="grid-card-image" style="">
-          <img src="static/images/info/profile.png" alt="">
-        </div>
-      </div>
-
-      <div class="grid-card w-3" style="">
-        <h2> i'm joao baptista, an architecture student from portugal. </h2>
-        <h2> this website is a collection of what I have acomplished so far. </h2>
-      </div>
-
-      <!-- Education Start -->
+        <!-- Education Start -->
         <div class="grid-card" style="">
 
 
@@ -57,9 +57,9 @@
           </p>
 
         </div>
-      <!-- Education End -->
+        <!-- Education End -->
 
-      <!-- Contests Start -->
+        <!-- Contests Start -->
         <div class="grid-card" style="">
 
 
@@ -72,9 +72,9 @@
           </p>
 
         </div>
-      <!-- Contests End -->
+        <!-- Contests End -->
 
-      <!-- Personal Studies Start -->
+        <!-- Personal Studies Start -->
         <div class="grid-card" style="">
 
 
@@ -87,9 +87,9 @@
           </p>
 
         </div>
-      <!-- Personal Studies End -->
+        <!-- Personal Studies End -->
 
-      <!-- Books Read Start -->
+        <!-- Books Read Start -->
         <div class="grid-card" style="">
 
 
@@ -106,28 +106,30 @@
           </p>
 
           <p>japanness in architecture <br>
-              <small> arata isozaki, 2006 </small>
+            <small> arata isozaki, 2006 </small>
           </p>
 
         </div>
-      <!-- Books Read End -->
-
+        <!-- Books Read End -->
+      </div>
     </section>
 
-    <section class="default-grid" id="site-map">
+    <section>
+      <div class="default-grid" id="site-map">
 
-      <div class="grid-card w-3" style="">
-        <h2> architecture </h2>
-        <br>
-        <h3><a href="index"> home </a></h3>
+        <div class="grid-card w-3" style="">
+          <h2> architecture </h2>
+          <br>
+          <h3><a href="index"> home </a></h3>
+        </div>
+
+        <div class="grid-card" style="">
+          <h2> photography </h2>
+          <br>
+          <h3><a href="self-portraits"> self portraits </a></h3>
+        </div>
+
       </div>
-
-      <div class="grid-card" style="">
-        <h2> photography </h2>
-        <br>
-        <h3><a href="self-portraits"> self portraits </a></h3>
-      </div>
-
     </section>
 
     <div class="spacer"></div>
@@ -137,11 +139,13 @@
         <div class="home-button">
           <a href="#home">■</a>
         </div>
-        <div class="footer-text">
+        <div class="empty-cell"></div>
+        <div class="footer-text sw-2">
           <p>beep-boop end of the page</p>
         </div>
       </div>
     </footer>
   </div>
 </body>
+
 </html>
