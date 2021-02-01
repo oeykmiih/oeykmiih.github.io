@@ -110,10 +110,6 @@ img {
   /* border: 1px solid red; */
 }
 
-.empty-cell {
-  display: none;
-}
-
 /* --- */
 
   .page-name, .footer-text, .info-button {
@@ -220,6 +216,11 @@ img {
 }
 
 @media only screen and (max-width: 850px) {
+
+  .empty-cell {
+    display: none;
+  }
+
 
   .home-button {
     display: none;

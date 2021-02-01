@@ -1,11 +1,11 @@
 :root {
-  --index-card-height: 20vw;
+  --index-card-height: 15vw;
 }
 
 .index-grid {
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 
   grid-row-gap: var(--grid-row-gap);
   grid-column-gap: var(--grid-column-gap);
@@ -21,8 +21,8 @@
 }
 
 .grid-card .grid-card-image img {
-  width: auto;
-  height: var(--index-card-height);
+  height:auto;
+  width: 100%;
 }
 
 
