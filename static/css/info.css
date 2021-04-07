@@ -31,6 +31,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .empty-cell {
+    display: none;
+  }
+
   .w-4, .w-5{
     grid-column: span 3;
   }

@@ -15,7 +15,6 @@
 
 .grid-card {
   overflow: hidden;
-  heigh: var(--index-card-height);
   min-height: var(--index-card-height);
   /* card height essentially controlling row heigh */
 }
