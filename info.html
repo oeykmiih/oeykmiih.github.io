@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="kyeo | architecture student & amateur photographer">
+  <meta name="description" content="kyeo | an architect to be">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link type="text/css" rel="stylesheet" href="static/css/main.css">
@@ -12,148 +12,62 @@
 
 </head>
 
-
 <body>
   <div class="container" id="home">
-    <section>
-      <!-- Start Header -->
-      <header>
-        <div class="row">
-          <div class="index-button">
-            <a href="index"><</a>
-          </div>
-          <div class="site-map-button">
-            <a href="info#site-map">site map</a>
-          </div>
-          <div class="mail-button">
-            <a href="mailto:contact@kyeo.xyz?subject=subject">contact@kyeo.xyz</a>
-          </div>
-        </div>
-      </header>
-      <!-- End Header -->
-      <div class="spacer"></div>
-      <!-- Start Info -->
-      <div class="info-grid" id="info">
-
-        <div class="grid-card" style="">
-          <div class="grid-card-image" style="">
-            <img src="static/images/info/profile.png" alt="">
-          </div>
-        </div>
-        <div class="grid-card w-3" style="">
-          <h2> i'm joao baptista, an architecture student from portugal. </h2>
-          <h2> this website is a collection of what I have acomplished so far. </h2>
-        </div>
-
-        <!-- Education Start -->
-        <div class="grid-card" style="">
-
-
-          <h2> education </h2>
-
-          <br>
-
-          <p> iscte-iul, integrated master in architecture <br>
-            <small> sep 2019 - </small>
-          </p>
-
-        </div>
-        <!-- Education End -->
-
-        <!-- Contests Start -->
-        <div class="grid-card" style="">
-
-
-          <h2> contests </h2>
-
-          <br>
-
-          <p> i should really do something like this <br>
-            <small> summer 2021 </small>
-          </p>
-
-        </div>
-        <!-- Contests End -->
-
-        <!-- Personal Studies Start -->
-        <div class="grid-card" style="">
-
-
-          <h2> personal studies </h2>
-
-          <br>
-
-          <p> one house <br>
-            <small> fall 2020 </small>
-          </p>
-
-        </div>
-        <!-- Personal Studies End -->
-
-        <!-- Books Read Start -->
-        <div class="grid-card" style="">
-
-
-          <h2> books read </h2>
-
-          <br>
-
-          <p> anti-object <br>
-            <small> kengo kuma, 2007 </small>
-          </p>
-
-          <p> complexity and contradiction in architecture <br>
-            <small> robert venturi and denise scott brown, 1966 </small>
-          </p>
-
-          <p>japanness in architecture <br>
-            <small> arata isozaki, 2006 </small>
-          </p>
-
-        </div>
-        <!-- Books Read End -->
+    <header class="row">
+      <a href="index"><</a>
+          <a href="info#site-map" id="site-map-button">site map</a>
+          <a href="mailto:contact@kyeo.xyz?subject=subject">contact@kyeo.xyz</a>
+    </header>
+    <div class="spacer"></div>
+    <div class="grid" id="info">
+      <div class="grid-card" style="">
+        <img src="static/images/info/profile.png" alt="">
       </div>
-    </section>
-    <div class="spacer">
+      <div class="grid-card" style="">
+        <h2> i'm joao baptista, an architecture student from portugal. <br> this website is a collection of what I have
+          acomplished so far. </h2>
+      </div>
+
+      <div class="grid-card" style="">
+        <h2>education</h2><br>
+        <p> iscte-iul, integrated master in architecture<br><small>sep 2019 - </small></p>
+      </div>
+      <div class="grid-card" style="">
+        <h2>contests</h2><br>
+        <p> i should really do something like this <br><small>summer 2021 </small></p>
+      </div>
+      <div class="grid-card" style="">
+        <h2> personal studies </h2><br>
+        <p> one house <br><small> fall 2020 </small></p>
+      </div>
+      <div class="grid-card" style="">
+        <h2> books read </h2><br>
+        <p> anti-object <br><small> kengo kuma, 2007</small></p>
+        <p> complexity and contradiction in architecture <br><small> robert venturi and denise scott brown, 1966
+          </small></p>
+        <p>japanness in architecture <br><small> arata isozaki, 2006 </small>
+        </p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="grid" id="site-map">
+      <div class="grid-card" style="">
+        <h2> architecture </h2><br>
+        <h4><a href="index"> home </a></h4><br>
+        <h4><a href="u015"> u015 </a></h4>
+      </div>
+      <div class="grid-card" style="">
+        <h2> photography </h2><br>
+        <h4><a href="self-portraits"> self portraits </a></h4>
+      </div>
 
     </div>
-    <section>
-      <div class="info-grid" id="site-map">
-
-        <div class="grid-card w-3" style="">
-          <h2> architecture </h2>
-          <br>
-          <h3><a href="index"> home </a></h3>
-          <br>
-          <h3><a href="u015"> u015 </a></h3>
-        </div>
-
-        <div class="grid-card" style="">
-          <h2> photography </h2>
-          <br>
-          <h3><a href="self-portraits"> self portraits </a></h3>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="spacer">
-
-    </div>
-
-    <!-- Start Footer -->
-    <footer>
-      <div class="row">
-        <div class="home-button">
-          <a href="#home">^</a>
-        </div>
-        <div class="empty-cell"></div>
-        <div class="footer-text sw-2">
-          <p>beep-boop end of the page</p>
-        </div>
-      </div>
+    <div class="spacer"></div>
+    <footer class="row">
+      <a href="#home" id="home-button">^</a>
+      <p>beep-boop end of the page</p>
     </footer>
-    <!-- End Footer -->
   </div>
 </body>
 
