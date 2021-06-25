@@ -98,9 +98,13 @@ h4 {
 }
 
 small {
-  padding-left: 0.5em;
+  /* padding-left: 0.5em; */
   font-size: 0.9em;
   font-style: italic;
+}
+
+p + p {
+  padding-top: 1em;
 }
 
 img {
