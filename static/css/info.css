@@ -1,7 +1,5 @@
 
 :root {
-  --grid-card-width:  calc( (var(--grid-width) - var(--grid-column-gap)) / 2 );
-  --grid-card-height: calc( var(--grid-card-width) * 4 / 3 );
 }
 
 .grid {
@@ -10,10 +8,8 @@
 }
 
 .grid-card {
-  flex-direction: column;
-  min-height: calc( var(--grid-card-height) / 2 );
-  height: unset;
-  text-align: left;
+  /* text-align: left; */
+  min-height: 20rem;
 }
 
 @media only screen and (max-width: 1300px) {}
@@ -22,5 +18,8 @@
     position: unset;
     left: unset;
     transform: unset;
+  }
+  .grid-card {
+    min-height: unset;
   }
 }
