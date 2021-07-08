@@ -11,8 +11,8 @@
 }
 
 .grid-card * {
-  height: inherit;
-  width: inherit;
+  /* height: inherit; */
+  /* width: inherit; */
   /* max-height: 100%; */
   /* max-width: 100%; */
 }
