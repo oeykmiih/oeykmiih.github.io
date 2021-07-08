@@ -10,13 +10,6 @@
   height: 25rem;
 }
 
-.grid-card * {
-  /* height: inherit; */
-  /* width: inherit; */
-  /* max-height: 100%; */
-  /* max-width: 100%; */
-}
-
 .grid-card img {
   width: auto;
   height: auto;
@@ -37,5 +30,9 @@
 
     .grid-card {
       height: unset;
+    }
+
+    .grid spacer {
+      display:none;
     }
   }
