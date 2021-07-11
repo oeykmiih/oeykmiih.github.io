@@ -1,38 +1,35 @@
 
 :root {
   }
-  
-.grid {
-    grid-template-columns: repeat(6, 1fr);
+
+.gallery {
+  overflow: hidden;
+  position: relative;
 }
 
-.grid-card {
-  height: 25rem;
-}
-
-.grid-card img {
+.gallery img {
   width: auto;
   height: auto;
   position: absolute;
 }
 
   @media only screen and (max-width: 850px) {
-    .grid-card img {
+    .gallery img {
       width: 100% !important;
       height: auto !important;
       top: 0% !important;
       right: 0% !important;
       bottom: 0% !important;
       left: 0% !important;
-
       position: unset;
+      padding-top: 1rem;
     }
 
-    .grid-card {
-      height: unset;
+    .gallery {
+      height: unset !important;
     }
 
-    .grid spacer {
+    .gallery spacer {
       display:none;
     }
   }

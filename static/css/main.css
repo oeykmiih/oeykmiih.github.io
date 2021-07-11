@@ -67,6 +67,15 @@ footer {
   min-height: unset;
 }
 
+footer *{
+  align-self: center;
+}
+
+footer #home-button{
+  position: relative;
+  top: 0.5rem;
+}
+
 #site-map-button {
   position: absolute;
   left: 50%;
@@ -74,6 +83,7 @@ footer {
 }
 
 /* content setup */
+
 h1, h2, h3, p, small {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -98,7 +108,6 @@ h4 {
 }
 
 small {
-  /* padding-left: 0.5em; */
   font-size: 0.9em;
   font-style: italic;
 }
@@ -109,9 +118,10 @@ p + p {
 
 img {
   transform-origin: 0% 0%;
+  z-index: 1;
 }
 
-.dwg img {
+.dwg {
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;          /* Firefox */
   image-rendering: -o-crisp-edges;            /* Opera */
@@ -127,11 +137,10 @@ img {
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 3.5rem;
     grid-column-gap: 1rem;
     grid-auto-flow: dense;
-    /* min-height: calc(100vh - 20rem); */
 }
 
 .grid-card {
@@ -140,6 +149,11 @@ img {
   flex-direction: column;
   text-align: center;
   position: relative;
+  min-height: 240px;
+}
+
+.grid-card:empty {
+  display: none;
 }
 
 .grid-card h3 {
@@ -189,22 +203,7 @@ img {
   height: calc(var(--grid-card-height) * 4 + var(--grid-row-gap) * 4);
 }
 
-/* responsive setup */
-
-/* @media only screen and (max-width: 1100px) {
-
-  html {
-    --body-width: 750px
-  }
-  
-  .grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-card h3 {
-    position: unset;
-  }
-} */
+/* responsive */
 
 @media only screen and (max-width: 850px) {
 
@@ -219,6 +218,11 @@ img {
   .row {
     min-height: unset;
     flex-direction: column;
+    max-width: calc(375px - 4rem);
+  }
+
+  footer {
+    left: unset;
   }
 
  .empty-cell, #home-button, .grid-card:empty {
